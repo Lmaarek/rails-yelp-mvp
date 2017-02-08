@@ -1,0 +1,11 @@
+<div class="container col-xs-8 col-xs-offset-2">
+  <div class="text-center"><h1>Créer un nouveau restaurant</h1></div>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category, collection: Restaurant::CATEGORY %>
+    <%= f.input :phone_number %>
+    <%= f.submit method: :post, class: "btn btn-primary" %>
+  <% end %>
+</div>
+

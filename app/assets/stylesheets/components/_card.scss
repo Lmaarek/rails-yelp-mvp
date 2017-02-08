@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+/* Body design */
+.card-body {
+  flex: 1 1 auto;
+}
+.card-body h1, h2, h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.card-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+/* Hover effects */
+.card:hover {
+  background: #f7f7fa;
+  cursor: pointer;
+}

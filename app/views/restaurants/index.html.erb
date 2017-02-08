@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="navbar-wagon">
+    <!-- Logo -->
+    <a href="/" class="navbar-wagon-brand">
+      <img src="images/lewagon.png" />
+    </a>
+
+
+  <!-- Right Navigation -->
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+      <!-- Search form -->
+      <form action="" class="navbar-wagon-search">
+        <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+        <button type="submit" class="navbar-wagon-search-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+     </div>
+  </div>
+</div>
+<div class="container">
+  <div class="bg-grey" class="padded">
+    <div class="text-center"><h1><strong>Restaurants</strong></h1> </div>
+    <% @restaurants.each do |restaurant|%>
+      <div class="card">
+        <div class="card-body">
+          <div class="text-center"><h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3></div>
+          <div class="text-center"><p><%= restaurant.category %></p></div>
+          <div class="text-center"><%= link_to "Delete restaurant", restaurant_path(restaurant), method: :delete, data: { confirm: "Are you sure?" } %></div>
+          </div>
+        </div>
+    <% end %>
+    <div class="padded text-center"><strong><%= link_to 'Add a new restaurant', new_restaurant_path %></strong></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="share-links">
+    <a href="#" class="share-link bg-facebook">
+      <i class="fa fa-facebook"></i>
+    </a>
+    <a href="#" class="share-link bg-twitter">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a href="#" class="share-link bg-email">
+      <i class="fa fa-envelope-o"></i>
+    </a>
+    <a href="#" class="share-link bg-text">
+      <i class="fa fa-mobile"></i>
+    </a>
+  </div>
+</div>
